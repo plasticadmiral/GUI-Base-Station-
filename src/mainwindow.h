@@ -58,6 +58,9 @@ private:
 
     void DisplayData();
 
+    inline void handlethegraphs();
+
+
 signals:
     void dataSet();
     void controlChanged();

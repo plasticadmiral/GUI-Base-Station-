@@ -26,11 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        src/mainwindow.cpp \
+        main.cpp                \
+        src/mainwindow.cpp      \
+        src/scatter_plot.cpp    \
+        src/line_plot.cpp       \
 
 HEADERS += \
-        src/mainwindow.h \
+        src/mainwindow.h        \
+        src/scatter_plot.h      \
+        src/line_plot.h         \
 
 FORMS += \
         src/mainwindow.ui

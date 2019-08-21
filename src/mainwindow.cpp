@@ -9,7 +9,11 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <QtDataVisualization>
+#include <QtCharts>
 
+using namespace QtDataVisualization;
+using namespace QtCharts;
 
 class BlockWriter
 {
@@ -75,6 +79,19 @@ private:
     QDataStream _stream;
 };
 
+void MainWindow:: handlethegraphs()
+{
+    Q3DScatter* scatter_graph  = new Q3DScatter();
+    QWidget* container = QWidget::createWindowContainer(scatter_graph);
+    QGridLayout* scatter_layout = new QGridLayout();
+
+    ui->MPU9250_graph_graph_window->setLayout(scatter_layout);
+    scatter_layout->addWidget(container, 1, 1);
+
+    container->setFocusPolicy(Qt::StrongFocus);
+    scatter_graph->activeTheme()->setType(Q3DTheme::ThemeStoneMoss);
+
+}
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -152,6 +169,7 @@ MainWindow::MainWindow(QWidget *parent) :
     hash_msg.insert(17, "magy");
     hash_msg.insert(18, "magz");
 
+    handlethegraphs();
 
 }
 
@@ -476,5 +494,6 @@ void MainWindow::zeroDown()
     ui->ESC_roll_slider->setSliderPosition(0);
     ui->ESC_pitch_slider->setSliderPosition(0);
     ui->ESC_yaw_slider->setSliderPosition(0);
+    sendCtrl();
 
 }

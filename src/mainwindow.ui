@@ -18,7 +18,10 @@
     <item row="6" column="2">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>6</number>
+       <number>3</number>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
       </property>
       <widget class="QWidget" name="dummy_data_tab">
        <attribute name="title">
@@ -263,9 +266,39 @@
       </widget>
       <widget class="QWidget" name="BMP280_graph_tab">
        <attribute name="title">
-        <string>BMP280_graph</string>
+        <string>BMP280_data_graph</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_6"/>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="BMP280_graph_nil">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Nil</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QWidget" name="widget" native="true"/>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="MPU9250_data_tab">
        <attribute name="title">
@@ -456,9 +489,118 @@
       </widget>
       <widget class="QWidget" name="MPU9250_graph_tab">
        <attribute name="title">
-        <string>MPU9250_data</string>
+        <string>MPU9250_data_graph</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_8"/>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="MPU9250_graph_pts_to_retain_spin_box">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="MPU9250_graph_toggle_cam_btn">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Toggle Camera Angle</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QComboBox" name="MPU9250_graph_shadow_quality_combo_box"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLabel" name="MPU9250_graph_dot_Style_label">
+          <property name="text">
+           <string>Dot Style</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QComboBox" name="MPU9250_graph_dot_style_combo_box"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="MPU9250_graph_theme_combo_box">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="MPU9250_graph_toggle_label_btn">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Toggle Label</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="MPU9250_graph_pts_to_retain_label">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Points to Retain</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="MPU9250_graph_theme_label">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Theme</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLabel" name="MPU9250_graph_shadow_quality_label">
+          <property name="text">
+           <string>Shadow Quality</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="11">
+         <widget class="QWidget" name="MPU9250_graph_graph_window" native="true"/>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="ESCControl">
        <property name="autoFillBackground">
